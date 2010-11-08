@@ -30,10 +30,10 @@ from middleware_extras import settings
 
 def get_formatted_headers():
     """
-    This function returns a list that contains the same headers as the
-    REVERSE_PROXY_HTTPS_HEADERS setting. Several transformations have been
-    applied to the headers so as to be in the format which is used in the
-    Django request object.
+    This function returns a list that contains the same (header_name, value)
+    tuples as the REVERSE_PROXY_HTTPS_HEADERS setting. Several transformations
+    have been applied to the headers so as to be in the format which is used
+    in the Django request object.
     
     For instance:
     
