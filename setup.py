@@ -3,8 +3,7 @@
 #
 #  This file is part of django-middleware-extras.
 #
-#  django-middleware-extras provides some extra middleware classes that are
-#  often needed by Django projects.
+#  DESCRIPTION_DESCRIPTION_DESCRIPTION
 #
 #  Development Web Site:
 #    - http://www.codetrax.org/projects/django-middleware-extras
@@ -51,7 +50,11 @@ sys.path.insert(0, os.path.abspath('src'))
 
 from setuptools import setup
 
-from middleware_extras import get_version, long_description
+from middleware_extras import get_version
+
+def read(fname):
+    """Utility function to read the README file."""
+    return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
 if __name__=='__main__':
     setup(
@@ -63,9 +66,10 @@ if __name__=='__main__':
         maintainer = 'George Notaras',
         maintainer_email = 'gnot [at] g-loaded.eu',
         url = 'http://www.codetrax.org/projects/django-middleware-extras',
-        description = 'django-middleware-extras provides some extra middleware classes that are often needed by Django projects.',
-        long_description = long_description,
+        description = 'DESCRIPTION_DESCRIPTION_DESCRIPTION',
+        long_description = read('README'),
         download_url = 'https://source.codetrax.org/hgroot/django-middleware-extras',
+        platforms=['any'],
         classifiers = [
             'Development Status :: 4 - Beta',
             'Environment :: Web Environment',
@@ -80,7 +84,12 @@ if __name__=='__main__':
             'Topic :: Software Development :: Libraries :: Python Modules',
         ],
         package_dir = {'': 'src'},
-        packages = ['middleware_extras'],
+        packages = [
+            'middleware_extras',
+            #'middleware_extras.templatetags',
+            #'middleware_extras.management',
+            #'middleware_extras.management.commands',
+        ],
         include_package_data = True,
         #zip_safe = False,
     )
