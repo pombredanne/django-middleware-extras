@@ -37,10 +37,13 @@ from middleware_extras import settings
 from middleware_extras.utils import get_formatted_headers
 
 
-class ReverseProxyHttpsHeadersMiddleware:
+class ReverseProxyHttpsHeadersMiddleware(object):
     
     def process_request(self, request):
         """
+        
+        Based on ticket by gnotaras: http://code.djangoproject.com/ticket/14597
+        
         All headers must match
         All header values must match
         """
@@ -53,4 +56,52 @@ class ReverseProxyHttpsHeadersMiddleware:
             elif request.META[header_name].lower() != header_value:
                 return
         request.META['HTTPS'] = 'on'
+
+
+
+
+class CompactHTMLMiddleware(object):
+    """Middleware that strips white space between HTML tags from the
+    response content.
+    
+    Add it last to the list of MIDDLEWARE_CLASSES:
+    
+    MIDDLEWARE_CLASSES = (
+        ...
+        'middleware_extras.middleware.CompactHTMLMiddleware'
+    )
+    """
+    
+    def process_response(self, request, response):
+        if 'text/html' in response['Content-Type']:
+            
+            #from django.utils.html import strip_spaces_between_tags
+            #response.content = strip_spaces_between_tags(response.content)
+            
+            from slimmer import xhtml_slimmer
+            response.content = xhtml_slimmer(response.content)
+            
+        return response
+
+
+class PrettifyHTMLMiddleware(object):
+    """Middleware that prettifies HTML.
+    
+    Add it last to the list of MIDDLEWARE_CLASSES:
+    
+    MIDDLEWARE_CLASSES = (
+        ...
+        'middleware_extras.middleware.PrettifyHTMLMiddleware'
+    )
+    """
+    
+    def process_response(self, request, response):
+        if 'text/html' in response['Content-Type']:
+            
+            # Beautify HTML for development
+            from BeautifulSoup import BeautifulSoup
+            soup = BeautifulSoup(response.content)
+            response.content = soup.prettify()
+        
+        return response
 
