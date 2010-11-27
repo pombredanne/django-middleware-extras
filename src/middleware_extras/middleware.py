@@ -25,8 +25,17 @@
 #  limitations under the License.
 #
 
-from context_extras import settings
-from context_extras.utils import get_formatted_headers
+"""
+CHECK THESE:
+
+http://djangosnippets.org/snippets/1706/
+http://djangosnippets.org/snippets/1999/
+http://djangosnippets.org/snippets/85/
+http://djangosnippets.org/snippets/240/
+"""
+
+from middleware_extras import settings
+from middleware_extras.utils import get_formatted_headers
 
 
 class ReverseProxyHttpsHeadersMiddleware:
