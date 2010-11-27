@@ -6,7 +6,7 @@ Introduction
 This section contains an introduction to *django-middleware-extras*, including general
 information about how to submit bug reports and make feature requests.
 
-DESCRIPTION_DESCRIPTION_DESCRIPTION
+django-middleware-extras provides some extra middleware classes that are often needed by Django projects.
 
 Licensed under the *Apache License version 2.0*. More licensing information
 exists in the license_ section.

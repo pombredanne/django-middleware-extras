@@ -2,7 +2,7 @@
 #
 #  This file is part of django-middleware-extras.
 #
-#  DESCRIPTION_DESCRIPTION_DESCRIPTION
+#  django-middleware-extras provides some extra middleware classes that are often needed by Django projects.
 #
 #  Development Web Site:
 #    - http://www.codetrax.org/projects/django-middleware-extras

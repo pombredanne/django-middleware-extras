@@ -17,7 +17,7 @@ Welcome to the *django-middleware-extras*'s documentation!
 About this project
 ==================
 
-DESCRIPTION_DESCRIPTION_DESCRIPTION
+django-middleware-extras provides some extra middleware classes that are often needed by Django projects.
 
 | **Author**: `George Notaras <http://www.g-loaded.eu/>`_
 | **Development Web Site**: `django-middleware-extras project <http://www.codetrax.org/projects/django-middleware-extras>`_

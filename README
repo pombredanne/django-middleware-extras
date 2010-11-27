@@ -7,7 +7,7 @@ django-middleware-extras
 | **Documentation**: `django-middleware-extras documentation <http://packages.python.org/django-middleware-extras>`_
 | **Downloads**: `django-middleware-extras releases <http://pypi.python.org/pypi/django-middleware-extras>`_
 
-DESCRIPTION_DESCRIPTION_DESCRIPTION
+django-middleware-extras provides some extra middleware classes that are often needed by Django projects.
 
 Licensed under the *Apache License version 2.0*. More licensing information
 exists in the license_ section.

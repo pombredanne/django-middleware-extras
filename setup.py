@@ -3,7 +3,7 @@
 #
 #  This file is part of django-middleware-extras.
 #
-#  DESCRIPTION_DESCRIPTION_DESCRIPTION
+#  django-middleware-extras provides some extra middleware classes that are often needed by Django projects.
 #
 #  Development Web Site:
 #    - http://www.codetrax.org/projects/django-middleware-extras
@@ -66,7 +66,7 @@ if __name__=='__main__':
         maintainer = 'George Notaras',
         maintainer_email = 'gnot [at] g-loaded.eu',
         url = 'http://www.codetrax.org/projects/django-middleware-extras',
-        description = 'DESCRIPTION_DESCRIPTION_DESCRIPTION',
+        description = 'django-middleware-extras provides some extra middleware classes that are often needed by Django projects.',
         long_description = read('README'),
         download_url = 'https://source.codetrax.org/hgroot/django-middleware-extras',
         platforms=['any'],
